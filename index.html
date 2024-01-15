@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.canvasjs.com/canvasjs.min.js"
+    ></script>
+    <script type="text/javascript" src="./chert2.js"></script>
+    <script src="[1](https://d3js.org/d3.v5.min.js)"></script>
+    <title>TradeVerse</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="item sidebar">
+        <ul>
+          <img src="./assets/logo.png" alt="" />
+          <p>Main menu</p>
+          <li>
+            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+            <a href="">News Quant</a>
+          </li>
+          <li>
+            <a href=""
+              ><i class="fa fa-fw fa-wrench"></i>Real Economic Indicators</a
+            >
+          </li>
+          <li>
+            <a href=""><i class="fa fa-fw fa-user"></i>One Score</a>
+          </li>
+          <li>
+            <a href=""><i class="fa fa-fw fa-envelope"></i>Alert Central</a>
+          </li>
+          <li>
+            <a href=""
+              ><i class="fa fa-question-circle" aria-hidden="true"></i>Customer
+              Support</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Searchbar -->
+      <div class="item searchbar">
+        <form role="search" id="form">
+          <button>
+            <svg viewBox="0 0 1024 1024">
+              <path
+                class="path1"
+                d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"
+              ></path>
+            </svg>
+          </button>
+          <input
+            type="search"
+            id="query"
+            name="q"
+            placeholder="Search your question here or ask TiiA"
+            aria-label="Search through site content"
+          />
+          <button>
+            <svg
+              fill="#000000"
+              class="microphone"
+              height="100px"
+              width="100px"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              enable-background="new 0 0 512 512"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <g>
+                    <path
+                      d="m439.5,236c0-11.3-9.1-20.4-20.4-20.4s-20.4,9.1-20.4,20.4c0,70-64,126.9-142.7,126.9-78.7,0-142.7-56.9-142.7-126.9 0-11.3-9.1-20.4-20.4-20.4s-20.4,9.1-20.4,20.4c0,86.2 71.5,157.4 163.1,166.7v57.5h-23.6c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4h88c11.3,0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4h-23.6v-57.5c91.6-9.3 163.1-80.5 163.1-166.7z"
+                    ></path>
+                    <path
+                      d="m256,323.5c51,0 92.3-41.3 92.3-92.3v-127.9c0-51-41.3-92.3-92.3-92.3s-92.3,41.3-92.3,92.3v127.9c0,51 41.3,92.3 92.3,92.3zm-52.3-220.2c0-28.8 23.5-52.3 52.3-52.3s52.3,23.5 52.3,52.3v127.9c0,28.8-23.5,52.3-52.3,52.3s-52.3-23.5-52.3-52.3v-127.9z"
+                    ></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </button>
+        </form>
+
+        <div class="curr-license">
+          <p>
+            <span style="color: rgb(0, 153, 255)">Current License :</span>
+            USD/CAD AUD/USD
+          </p>
+        </div>
+      </div>
+
+      <!-- User -->
+      <div class="item user">
+        <div class="topuser">
+          <i class="fa fa-bell bell-icon" aria-hidden="true"></i>
+          <img src="./assets/user.png" alt="" />
+          <p>
+            Username <a href=""> <i class="arrow down arrow-down"></i></a>
+          </p>
+        </div>
+        <div class="middleuser">Welcome, Username</div>
+        <div class="bottomuser">Good to see you agent</div>
+      </div>
+
+      <!-- News and Data flow Graph -->
+      <div class="item data-flow-graph charts">
+        <p style="font-size: 20px">News and Data Flow</p>
+        <canvas
+          id="bubbleChart"
+          style="
+            display: block;
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+          "
+        ></canvas>
+      </div>
+
+      <!-- Average Score -->
+      <div class="item average-score">
+        <p >Average Score</p>
+        <div class="donut average-score">
+          <div class="donut-default"></div>
+          <div class="donut-line"></div>
+          <div class="donut-text">
+            <span>75</span>
+          </div>
+          <div class="donut-case"></div>
+        </div>
+        <div class="average-data">
+            <p>75%</p>
+            <p>About Graph</p>
+            <a href="">See Detail</a>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="item table">
+        <div class="container-for-table">
+          <table>
+            <tr>
+              <th colspan="1" style="font-size: 20px">
+                Refined News and Data Flow
+              </th>
+            </tr>
+            <tr>
+              <th>Type</th>
+              <th>News</th>
+              <th>Score</th>
+              <th>Impact</th>
+              <th>Probability</th>
+            </tr>
+            <tr>
+              <td>
+                <div class="c1"></div>
+                ERU
+              </td>
+              <td>
+                <p>
+                  The Euro has steadied agains the US Dollar on Thursday as the
+                  market pondersthe path of Fed rate hikes.
+                </p>
+              </td>
+              <td>+1</td>
+              <td>Neutral</td>
+              <td>High</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="c2"></div>
+                INR
+              </td>
+              <td>
+                <p>
+                  The Euro has steadied agains the US Dollar on Thursday as the
+                  market pondersthe path of Fed rate hikes.
+                </p>
+              </td>
+              <td>+1</td>
+              <td>High</td>
+              <td>High</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="c3"></div>
+                CAD
+              </td>
+              <td>
+                <p>
+                  The Euro has steadied agains the US Dollar on Thursday as the
+                  market pondersthe path of Fed rate hikes.
+                </p>
+              </td>
+              <td>+1</td>
+              <td>Medium</td>
+              <td>High</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="c4"></div>
+                CAD
+              </td>
+              <td>
+                <p>
+                  The Euro has steadied agains the US Dollar on Thursday as the
+                  market pondersthe path of Fed rate hikes.
+                </p>
+              </td>
+              <td>+1</td>
+              <td>Low</td>
+              <td>High</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="c5"></div>
+                OIL
+              </td>
+              <td>
+                <p>
+                  The Euro has steadied agains the US Dollar on Thursday as the
+                  market pondersthe path of Fed rate hikes.
+                </p>
+              </td>
+              <td>+1</td>
+              <td>Neutral</td>
+              <td>High</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="item focus-points">
+        <p>Top 10 Focus Points</p>
+            <ol>
+            <li>Focus Topic 1</li>
+            <li>Focus Topic 2</li>
+            <li>Focus Topic 3</li>
+            <li>Focus Topic 4</li>
+            <li>Focus Topic 5</li>
+            <li>Focus Topic 6</li>
+            <li>Focus Topic 7</li>
+            <li>Focus Topic 8</li>
+            <li>Focus Topic 9</li>
+            <li>Focus Topic 10</li>
+        </ol>
+      </div>
+    </div>
+
+    <script type="module" src="chart1.js"></script>
+  </body>
+</html>
